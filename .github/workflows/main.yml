@@ -57,5 +57,6 @@ jobs:
             "C:\Program Files\Conan\conan\conan.exe" remote add conan-mpusz https://api.bintray.com/conan/mpusz/conan-mpusz
             "C:\Program Files\Conan\conan\conan.exe" install ..
             cmake ..
+            type "D:/a/conan-test2/conan-test2/build/CMakeFiles/CMakeOutput.log"
         shell: cmd
 
