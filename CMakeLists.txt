@@ -8,5 +8,5 @@ conan_basic_setup(TARGETS)
 
 add_executable(${CMAKE_PROJECT_NAME} test_package.cpp)
 
-target_link_libraries( ${CONAN_LIBS})
+target_link_libraries( tbb )
 set_property(TARGET ${CMAKE_PROJECT_NAME} PROPERTY CXX_STANDARD 14)
