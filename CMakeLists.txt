@@ -6,5 +6,5 @@ set(CMAKE_VERBOSE_MAKEFILE TRUE)
 include(conanbuildinfo.cmake)
 CONAN_BASIC_SETUP()
 
-ADD_EXECUTABLE(mytest test_package.cpp)
+ADD_EXECUTABLE(test_package test_package.cpp)
 TARGET_LINK_LIBRARIES(test_package ${CONAN_LIBS})
