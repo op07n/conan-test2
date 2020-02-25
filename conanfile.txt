@@ -1,8 +1,8 @@
 [requires]
-parallelstl/20181004@conan/stable 
+TBB/2019_U4@zinnion/stable
 
 [options]
-parallelstl:shared=True
+TBB:shared=True
 
 [generators]
 cmake
