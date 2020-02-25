@@ -1,5 +1,10 @@
 [requires]
 parallelstl/20181004@conan/stable 
 
+
 [generators]
-visual_studio
+cmake
+
+[imports]
+bin, *.dll -> ./bin
+lib, *.dylib* -> ./bin
