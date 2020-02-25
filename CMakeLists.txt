@@ -7,5 +7,7 @@ include(${CMAKE_BINARY_DIR}/conanbuildinfo.cmake)
 conan_basic_setup(TARGETS)
 
 add_executable(${CMAKE_PROJECT_NAME} test_package.cpp)
+
+find_package(TBB REQUIRED)
 target_link_libraries( ${CONAN_LIBS})
 set_property(TARGET ${CMAKE_PROJECT_NAME} PROPERTY CXX_STANDARD 14)
