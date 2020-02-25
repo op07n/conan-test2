@@ -7,4 +7,4 @@ include(conanbuildinfo.cmake)
 CONAN_BASIC_SETUP()
 
 ADD_EXECUTABLE(mytest test_package.cpp)
-TARGET_LINK_LIBRARIES(mytest ${CONAN_LIBS})
+TARGET_LINK_LIBRARIES(test_package ${CONAN_LIBS})
