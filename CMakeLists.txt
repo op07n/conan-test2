@@ -1,12 +1,10 @@
-project(test_package CXX)
+PROJECT(test_package)
 cmake_minimum_required(VERSION 3.1.2)
 
 set(CMAKE_VERBOSE_MAKEFILE TRUE)
 
-include(${CMAKE_BINARY_DIR}/conanbuildinfo.cmake)
-conan_basic_setup(TARGETS)
+include(conanbuildinfo.cmake)
+CONAN_BASIC_SETUP()
 
-add_executable(${CMAKE_PROJECT_NAME} test_package.cpp)
-
-target_link_libraries( tbb )
-set_property(TARGET ${CMAKE_PROJECT_NAME} PROPERTY CXX_STANDARD 14)
+ADD_EXECUTABLE(mytest test_package.cpp)
+TARGET_LINK_LIBRARIES(mytest ${CONAN_LIBS})
