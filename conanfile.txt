@@ -1,8 +1,8 @@
 [requires]
 parallelstl/20181004@conan/stable 
 
+[options]
+parallelstl:shared=True
 
 [generators]
 cmake
-
-
