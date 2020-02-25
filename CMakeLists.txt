@@ -1,11 +1,11 @@
-PROJECT(MyHello)
+PROJECT(conan-test2)
 cmake_minimum_required(VERSION 3.1.2)
 
 set(CMAKE_VERBOSE_MAKEFILE TRUE)
 
 include(${CMAKE_BINARY_DIR}/conanbuildinfo.cmake)
 
-CONAN_BASIC_SETUP()
+CONAN_BASIC_SETUP(TARGETS)
 
-ADD_EXECUTABLE(test_package test_package.cpp)
-TARGET_LINK_LIBRARIES(test_package ${CONAN_LIBS})
+ADD_EXECUTABLE(${CMAKE_PROJECT_NAME} test_package.cpp)
+TARGET_LINK_LIBRARIES(${CMAKE_PROJECT_NAME} ${CONAN_LIBS})
