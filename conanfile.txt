@@ -5,5 +5,4 @@ parallelstl/20181004@conan/stable
 [generators]
 cmake
 
-[imports]
-*.dll -> ./bin
+
