@@ -1,0 +1,5 @@
+[requires]
+parallelstl/20181004@conan/stable 
+
+[generators]
+visual_studio
