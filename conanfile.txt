@@ -6,5 +6,4 @@ parallelstl/20181004@conan/stable
 cmake
 
 [imports]
-bin, *.dll -> ./bin
-lib, *.dylib* -> ./bin
+*.dll -> ./bin
