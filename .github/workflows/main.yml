@@ -51,13 +51,13 @@ jobs:
       - name: Build (Windows)
         if: startsWith(matrix.os, 'windows')
         run: |
-            call "%programfiles(x86)%\Microsoft Visual Studio\2019\Enterprise\VC\Auxiliary\Build\vcvars32.bat"
+            call "%programfiles(x86)%\Microsoft Visual Studio\2019\Enterprise\VC\Auxiliary\Build\vcvars64.bat"
             mkdir build
             cd build
             "C:\Program Files\Conan\conan\conan.exe" install .. --build TBB
-            cmake -G "Visual Studio 16 2019" -A Win32 -DCMAKE_VERBOSE_MAKEFILE=true -DCMAKE_CONFIGURATION_TYPES=Release ..
+            cmake -G "Visual Studio 16 2019" -A x64 -DCMAKE_VERBOSE_MAKEFILE=true -DCMAKE_CONFIGURATION_TYPES=Release ..
             msbuild.exe conan-test2.vcxproj /p:Configuration=Release /p:AdditionalIncludePaths=%CONAN_INCLUDE_DIRS_TBB%
-            echo $CONAN_LIB_DIRS
+            echo %CONAN_LIB_DIRS%
             7z a conan-test2.zip D:/a/conan-test2/
         shell: cmd
 
