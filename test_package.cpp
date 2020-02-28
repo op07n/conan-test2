@@ -3,7 +3,6 @@
 #include "tbb/compat/tuple"
 #include <iostream>
 
-
 using namespace tbb;
 using namespace tbb::flow;
 
