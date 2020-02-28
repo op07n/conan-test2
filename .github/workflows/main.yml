@@ -51,7 +51,7 @@ jobs:
       - name: Build (Windows)
         if: startsWith(matrix.os, 'windows')
         run: |
-            call "%programfiles(x86)%\Microsoft Visual Studio\2019\Enterprise\VC\Auxiliary\Build\vcvars64.bat"
+            call "%programfiles(x86)%\Microsoft Visual Studio\2019\Enterprise\VC\Auxiliary\Build\vcvars32.bat"
             mkdir build
             cd build
             "C:\Program Files\Conan\conan\conan.exe" install .. --build TBB
