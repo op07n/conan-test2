@@ -57,7 +57,7 @@ jobs:
             "C:\Program Files\Conan\conan\conan.exe" remote add conan-mpusz https://api.bintray.com/conan/mpusz/conan-mpusz
             "C:\Program Files\Conan\conan\conan.exe" install ..
             cmake --G "Visual Studio 16 2019" -A x64 -DCMAKE_CONFIGURATION_TYPES=Release ..
-            cmake --build . --config Release
+            msbuild.exe ALL_BUILD.vcxproj /t:clean /p:Configuration=Release  /m
             7z a conan-test2.zip D:/a/conan-test2/
         shell: cmd
 
